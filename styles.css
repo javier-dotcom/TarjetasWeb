@@ -8,7 +8,7 @@ body, html {
 }
 
 .background-image {
-    background-image: url('img/4.png');
+    background-image: url('img/2.png');
     /* Reemplaza con la ruta de tu imagen de fondo */
     background-size: cover;
     background-position: center;
@@ -70,7 +70,7 @@ h1{
     font-style: italic;
     text-align: center;
     font-size: 50px;
-    color: rgb(119, 47, 16,0.8);
+    color: rgba(119, 16, 16, 0.8);
 }
 
 .teEspero{
@@ -104,7 +104,7 @@ h1{
   }
   
   .slider {
-    background-image:url('img/4.png') ;
+    background-image:url('img/2.png') ;
     -webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
