@@ -3,7 +3,9 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: 600px;
     height: 100%;
+    margin: auto;
    
 }
 
@@ -18,14 +20,14 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    max-width: 900px;
     margin: auto;
+    
 }
 
 .content-container {
     background-color: rgba(255, 255, 255, 0.1);
     /* Fondo blanco translúcido */
-    width: 75%;
+    width: 95%;
     /* Ajusta el tamaño del contenedor según tus necesidades */
     max-width: 300px;
     /* Tamaño máximo para pantallas más grandes */
@@ -114,6 +116,7 @@ h1{
     position: relative;
     width: 100%;
     border-radius: 10px;
+   
    
   }
   
@@ -422,68 +425,69 @@ svg text {
 
 
 
+.accordion-header{
 
+ 
+  border-radius: 8px;
+  border: 2px solid rgba(119, 16, 16, 0.6);
+}
+/*.accordion-body,.accordion{
+ /* background-color:rgba(224, 12, 5, 0.2);
+ 
 
+}*/
+.accordion-button {
+  background-color:rgba(224, 12, 5, 0.3);
+  color: rgba(119, 16, 16, 0.8);
+  border: 2px solid rgba(119, 16, 16, 0.6);
   
-.container {
- 
-  height: 376px;
+}
+
+.accordion-button.collapsed {
+  background-color:rgba(224, 12, 5, 0.3);
+  color: rgba(119, 16, 16, 0.8);
+  
+}
+
+.accordion-body {
+  background-color:rgba(224, 12, 5, 0.3);
   border-radius: 8px;
 }
 
-details {
-  background-color:rgba(224, 12, 5, 0.2);
-  border-radius: 8px;
-  border: 2px solid rgba(119, 47, 16,0.4);
-  cursor: pointer;
- 
-  transition: all calc(var(--transition-duration) / 2) linear;
-  min-height: 48px;
-  max-height: var(--collapsed-height);
-  overflow: hidden;
-  will-change: height;
+.inputAsistencia1{
+  display: flex;
+  flex-direction: column;
 }
-
-details + details {
-  margin-top: 10px;
+.inputAsistencia1>*{
+  margin: 0;
 }
-
-details p {
-  color: #fefefe;
-  line-height: 1.7;
-  margin: 10px 0 0;
-  padding: 0 20px 15px;
+.inputAsistencia{
+  display: flex;
+  flex-direction: row;
+  gap:2px;
 }
-
-
-
-
-
-
-details[open] {
-  transition: all var(--transition-duration) linear;
-  min-height: 100px;
-  max-height: var(--expanded-height);
-  will-change: height;
-}
-
-summary {
-  outline: none;
-  font-size: 16px;
-  padding: 13px;
-  border-radius: 8px;
-}
-
-summary:after {
-  margin-top: 2px;
-  content: "➕";
-  float: left;
-  margin-right: 11px;
+.inputAsistencia2{
+border: none;
+  width: 100%;
   text-align: center;
-  font-size: 11px;
+  border-radius: 6px;
+  
+}
+.inputAsistencia1 p{
+  color: rgba(119, 16, 16, 0.8);
 }
 
-[open] summary:after {
-  padding: 0 0 12px 0;
-  content: "➖";
+.inputAsistencia1check{
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  gap:4px;
+}
+
+.enviar{
+  border-radius: 8px;
+  border: 2px solid rgba(119, 16, 16, 0.6);
+background-color: rgba(119, 16, 16, 0.1);
+width: 100%;
+color: rgba(119, 16, 16, 0.6);
 }
