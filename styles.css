@@ -1,44 +1,59 @@
-/* styles.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
-    margin: auto;
-   
+/* Aseguramos que no haya márgenes o paddings que causen desplazamiento horizontal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Asegura que el contenido esté centrado verticalmente */
 }
 
 .background-image {
-    background-image: url('img/2.png');
-    /* Reemplaza con la ruta de tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin: auto;
-    
+  background-image: url('img/2.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo blanco translúcido */
-    width: 75%;
-    /* Ajusta el tamaño del contenedor según tus necesidades */
-    max-width: 300px;
-    /* Tamaño máximo para pantallas más grandes */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    overflow-y: auto;
-    max-height: 85%;
-    /* Para que el contenido no se salga de la pantalla */
-    border: double 2px rgb(228, 181, 162);
+ 
+  width: 85%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 89%;
+  border: double 2px rgb(228, 181, 162);
+  margin: 0 auto; /* Centramos el contenedor horizontalmente */
+  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
 }
+
+/* Asegura que la imagen de fondo no cause desplazamiento horizontal */
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  z-index: -1;
+}
+
 
 h2, p {
     text-align: center;
@@ -204,9 +219,10 @@ align-items: center;
 
 
 svg {
-	width: 600px;
-	height: 300px;
+	width:300px;
+	height: 400px;
 	margin: 0 auto;
+  padding: 0;
 }
 
 svg text {
@@ -214,7 +230,7 @@ svg text {
 	text-transform: uppercase;
 	animation: stroke 5s infinite alternate;
 	letter-spacing: 10px;
-	font-size: 25px;
+	font-size: 35px;
 }
 @keyframes stroke {
 	0% {
@@ -491,3 +507,9 @@ background-color: rgba(119, 16, 16, 0.1);
 width: 100%;
 color: rgba(119, 16, 16, 0.6);
 }
+
+.img-fluid{
+  width: 100%;
+}
+
+

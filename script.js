@@ -20,10 +20,3 @@ chars.forEach((char, i) => {
 
 
 
-
-
-
-
-
-
-
