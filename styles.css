@@ -507,7 +507,7 @@ color: rgba(119, 16, 16, 0.6);
 }
 
 .image {
-  width:280px;
+  width:250px;
   margin: 10px 0;
   opacity: 0;
   transition: margin-left 1s ease-in-out, opacity 1s ease-in-out;
