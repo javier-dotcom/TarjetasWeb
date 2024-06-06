@@ -37,7 +37,7 @@ html, body {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  overflow-y: auto;
+  overflow-y:scroll;
   max-height: 89%;
   border: double 2px rgb(228, 181, 162);
   margin: 0 auto; /* Centramos el contenedor horizontalmente */
@@ -223,49 +223,6 @@ align-items: center;
 
 
 
-
-
-svg {
-	width:300px;
-	height: 400px;
-	margin: 0 auto;
-  padding: 0;
-}
-
-svg text {
-    font-family: "Dancing Script", cursive;
-	text-transform: uppercase;
-	animation: stroke 5s infinite alternate;
-	letter-spacing: 10px;
-	font-size: 35px;
-}
-@keyframes stroke {
-	0% {
-		fill: rgba(72, 138, 20, 0);
-		stroke: rgba(119, 47, 16,0.8);
-		stroke-dashoffset: 25%;
-		stroke-dasharray: 0 50%;
-		stroke-width: 0.8;
-	}
-	50% {
-		fill: rgba(72, 138, 20, 0);
-		stroke: rgba(119, 47, 16,0.8);
-		stroke-width: 1.2;
-	}
-	70% {
-		fill: rgba(72, 138, 20, 0);
-		stroke: rgba(119, 47, 16,0.8);
-		stroke-width: 1.5;
-	}
-	90%,
-	100% {
-		fill: rgba(119, 47, 16,0.4);
-		stroke: rgba(54, 95, 160, 0);
-		stroke-dashoffset: -25%;
-		stroke-dasharray: 50% 0;
-		stroke-width: 0;
-	}
-}
 
 
 
@@ -551,15 +508,15 @@ color: rgba(119, 16, 16, 0.6);
 
 .image {
   width: 300px;
-  height: 200px;
+  
   margin: 20px 0;
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(20%);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .image.left {
-  transform: translateX(-100%);
+  transform: translateX(-20%);
   height: 270px;
   border-radius:9px;
   border: groove transparent 11px;
