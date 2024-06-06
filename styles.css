@@ -102,7 +102,10 @@ h1{
     border-radius: 10px;
     color: rgba(119, 16, 16, 0.8);
 }
+.teEspero span{
 
+  font-size:70px;
+}
 
 @-webkit-keyframes scroll {
     0% {
@@ -482,7 +485,7 @@ color: rgba(119, 16, 16, 0.6);
 
 
 .collapsedh5{
-  font-size: larger!important;
+  font-size:35px;
 }
 
 
