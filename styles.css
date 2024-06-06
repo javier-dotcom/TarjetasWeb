@@ -497,17 +497,18 @@ color: rgba(119, 16, 16, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  
   background-image: url('img/2.png');
   background-repeat: repeat;
-  background-position: inherit;
+
   background-size: cover;
   border-radius: 6px;
+  width: 100%;
 }
 
 .image {
-  width: 300px;
-  margin: 20px 0;
+  width:280px;
+  margin: 10px 0;
   opacity: 0;
   transition: margin-left 1s ease-in-out, opacity 1s ease-in-out;
 }
