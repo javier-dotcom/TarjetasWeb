@@ -19,7 +19,7 @@ html, body {
 }
 
 .background-image {
-  background-image: url('img/2.png');
+  background-image: url('img/fondo12.png');
   background-size: cover;
   background-position: center;
   max-width: 500px;
@@ -99,6 +99,7 @@ h1{
     -webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
     -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
     box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
+    background-color: rgba(151, 52, 66, 0.24);
     border-radius: 10px;
     color: rgba(119, 16, 16, 0.8);
 }
@@ -130,7 +131,7 @@ h1{
   }
   
   .slider {
-    background-image:url('img/2.png') ;
+    background-image:url('img/fondo12.png') ;
     -webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
@@ -206,6 +207,7 @@ align-items: center;
     box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.4);
     border-radius: 10px;
     color:rgba(119, 47, 16,0.4);
+    background-color: rgba(151, 52, 66, 0.29);
 }
 .numeroBig{
 
@@ -501,7 +503,7 @@ color: rgba(119, 16, 16, 0.6);
   flex-direction: column;
   align-items: center;
   
-  background-image: url('img/2.png');
+  background-image: url('img/fondo12.png');
   background-repeat: repeat;
 
   background-size: cover;
@@ -521,13 +523,13 @@ color: rgba(119, 16, 16, 0.6);
   height: 270px;
   border-radius: 9px;
   border: groove transparent 11px;
-  background-image: url('img/2.png');
+  background-image: url('img/fondo12.png');
 }
 
 .image.right {
   margin-left: 100%; /* Mueve la imagen fuera del área visible */
   height: 270px;
-  background-image: url('img/2.png');
+  background-image: url('img/fondo12.png');
   border-radius: 9px;
   border: groove transparent 11px;
 }
