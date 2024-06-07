@@ -19,7 +19,7 @@ html, body {
 }
 
 .background-image {
-  background-image: url('img/fondo12.png');
+  background-image: url('img/fondo4.png');
   background-size: cover;
   background-position: center;
   max-width: 500px;
@@ -96,12 +96,14 @@ h1{
 }
 
 .teEspero{
-    -webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
-    -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
-    box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.5);
-    background-color: rgba(151, 52, 66, 0.24);
+  -webkit-box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
+  -moz-box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
+  box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
+  border-radius: 10px;
+  color: rgba(119, 16, 16, 0.8);
+  background-color:rgb(205, 156, 178,0.7);
+
     border-radius: 10px;
-    color: rgba(119, 16, 16, 0.8);
 }
 .teEspero span{
 
@@ -131,7 +133,7 @@ h1{
   }
   
   .slider {
-    background-image:url('img/fondo12.png') ;
+    background-image:url('img/fondo4.png') ;
     -webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
     box-shadow: 0px -1px 12px 4px rgba(119, 47, 16, 0.8);
@@ -202,12 +204,13 @@ h1{
     flex-direction: row;
     justify-content: center;
 align-items: center;
--webkit-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.4);
-    -moz-box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.4);
-    box-shadow: 0px -1px 12px 4px rgba(119, 47, 16,0.4);
+-webkit-box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
+    -moz-box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
+    box-shadow: 0px -1px 12px 4px rgb(205, 156, 178,0.4);
     border-radius: 10px;
-    color:rgba(119, 47, 16,0.4);
-    background-color: rgba(151, 52, 66, 0.29);
+    color: rgba(119, 16, 16, 0.8);
+    background-color:rgb(205, 156, 178,0.7);
+    ;
 }
 .numeroBig{
 
@@ -236,7 +239,8 @@ align-items: center;
     margin-top: -150px;
     height: 100%;
     width: 100%;
-    
+    color: rgba(119, 16, 16, 0.8);
+    background-color:rgb(205, 156, 178,0.7);
     display: flex;
     justify-content: center;
     
@@ -250,6 +254,8 @@ align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    color: rgba(119, 16, 16, 0.8);
+    background-color:rgb(205, 156, 178,0.7);
    
   }
   
@@ -329,7 +335,8 @@ align-items: center;
   
   .carousel__item-body {
     width: 100%;
-    background-color:rgba(224, 12, 5, 0.2);
+    color: rgba(119, 16, 16, 0.8);
+  background-color:rgb(205, 156, 178,0.7);
     border-radius: 8px;
     border: 2px solid rgba(119, 47, 16,0.4);
  
@@ -422,22 +429,22 @@ align-items: center;
 
 }*/
 .accordion-button {
-  background-color:rgba(224, 12, 5, 0.3);
   color: rgba(119, 16, 16, 0.8);
+  background-color:rgb(205, 156, 178,0.7);
   border: 2px solid rgba(119, 16, 16, 0.6);
   
   
 }
 
 .accordion-button.collapsed {
-  background-color:rgba(224, 12, 5, 0.3);
   color: rgba(119, 16, 16, 0.8);
- 
+  background-color:rgb(205, 156, 178,0.7);
   
 }
 
 .accordion-body {
-  background-color:rgba(224, 12, 5, 0.3);
+  color: rgba(119, 16, 16, 0.8);
+  background-color:rgb(205, 156, 178,0.7);
   border-radius: 8px;
  
 }
@@ -503,7 +510,7 @@ color: rgba(119, 16, 16, 0.6);
   flex-direction: column;
   align-items: center;
   
-  background-image: url('img/fondo12.png');
+  background-image: url('img/fondo4.png');
   background-repeat: repeat;
 
   background-size: cover;
@@ -523,13 +530,13 @@ color: rgba(119, 16, 16, 0.6);
   height: 270px;
   border-radius: 9px;
   border: groove transparent 11px;
-  background-image: url('img/fondo12.png');
+  background-image: url('img/fondo4.png');
 }
 
 .image.right {
   margin-left: 100%; /* Mueve la imagen fuera del área visible */
   height: 270px;
-  background-image: url('img/fondo12.png');
+  background-image: url('img/fondo4.png');
   border-radius: 9px;
   border: groove transparent 11px;
 }
@@ -537,4 +544,21 @@ color: rgba(119, 16, 16, 0.6);
 .image.show {
   opacity: 1;
   margin-left: 0; /* Muestra la imagen moviéndola hacia adentro */
+}
+
+.fondoBlanco{
+  background-color: rgb(240, 255, 255,0.8);
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: large;
+}
+
+.fondoBlanco1{
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: auto;
 }
