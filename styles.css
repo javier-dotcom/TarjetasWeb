@@ -551,20 +551,28 @@ color: rgba(119, 16, 16, 0.6);
 }
 
 .fondoBlanco{
-  background-color: rgb(240, 255, 255,0.8);
+  /*background-color: rgb(240, 255, 255,0.8);*/
+ 
   padding: 5px;
   border-radius: 10px;
   font-family: "Dancing Script", cursive;
-  font-size: large;
+  font-size: x-large;
+  
 }
+.text{
 
+  height: 500px;
+}
 .fondoBlanco1{
+  background-image: url('img/fondo13.png');
+  background-position: center;
   padding-top: 22px;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
-  height: auto;
+ 
+ 
 }
 
 
