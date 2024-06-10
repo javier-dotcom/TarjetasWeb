@@ -583,7 +583,7 @@ color: rgba(119, 16, 16, 0.6);
   bottom: -50px; /* Inicialmente fuera de la pantalla */
   left: 50%; /* Centra el párrafo horizontalmente */
   transform: translateX(-50%);
-font-size: 22.5px;
+font-size: 18px;
  font-family: "Dancing Script", cursive;
 font-style: italic;
   color: #550b0b; /* Color de texto */
