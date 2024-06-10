@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+h1,h2,h3{
+    color:rgb(255, 255, 255,0.5);
+    text-align: center;
+    
+}
+
+.item{
+    color:rgb(255, 255, 255,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    max-width: 500px;
+    margin: auto;
+    text-align:center ;
+}
+
+.item1{
+border: 3px double rgb(2, 80, 21);
+    padding: 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+.item1:hover{
+background-color:  rgb(2, 80, 21,0.4);
+color:rgb(255, 255, 255,0.9);
+cursor:pointer;
+-webkit-box-shadow: -1px 0px 5px 3px rgba(3,110,7,0.3);
+-moz-box-shadow: -1px 0px 5px 3px rgba(3,110,7,0.3);
+box-shadow: -1px 0px 5px 3px rgba(3,110,7,0.3);
+}
+.logo{
+   text-align: center;
+}
