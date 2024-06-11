@@ -644,3 +644,23 @@ font-style: italic;
   border-radius: 10px;
   padding: 5px;
 }
+
+
+table{
+  font-size: x-small;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+ 
+}
+
+
+.trTitulo{
+padding: 6px;
+ background-color:rgb(205, 156, 178,0.5);
+}
+
+.trContenido{
+  border: 1px solid rgb(205, 156, 178,0.5);
+}
