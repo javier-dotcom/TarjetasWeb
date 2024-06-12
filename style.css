@@ -1,0 +1,17 @@
+.formCrearEvento{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+.submitCrearEvento{
+    margin: auto;
+    text-align: center;
+}
+.h2CrearEvento{
+    text-align: center;
+}
