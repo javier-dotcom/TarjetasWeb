@@ -1,13 +1,14 @@
 <?php
+session_start();
 require_once "conectar.php";
 // Consulta para seleccionar todos los campos del evento con id = 5
 $consulta = "SELECT * FROM eventos WHERE id = 6";
 $datos = mysqli_query($conexion, $consulta);
-
 // Verifica si la consulta devolvió algún resultado
 if ($fila = mysqli_fetch_array($datos)) {
   // Extraer todos los campos de la fila
   $id = $fila["id"];
+  $_SESSION['id_evento'] = $id;
   $nombre_cumpleanera = $fila["nombre_cumpleanera"];
   $fecha_evento = $fila["fecha_evento"];
   $hora_evento = $fila["hora_evento"];
@@ -24,9 +25,7 @@ if ($fila = mysqli_fetch_array($datos)) {
   $id_frase_para_mensaje = $fila["id_frase_para_mensaje"];
   $id_dress_code = $fila["id_dress_code"];
   $id_frase_regalo = $fila["id_frase_para_regalo"];
-
 }
-
 $consultaFraseAsistencia = "SELECT * FROM frases_para_asistencia fpa WHERE fpa.id = $id_frase_para_asistencia";
 $datosFraseAsistencia = mysqli_query($conexion, $consultaFraseAsistencia);
 $fraseParaAsistencia = $fila = mysqli_fetch_array($datosFraseAsistencia)["texto"];
@@ -56,7 +55,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitaciones Virtuales</title>
-  <link rel="stylesheet" href="rosa.css">
+  <link rel="stylesheet" href="azul.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap" rel="stylesheet">
@@ -302,7 +301,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
       <br>
       <div class="container-2">
         <div class="image-container-2">
-          <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+          <img src="img/fondo24.png" alt="Imagen 2" class="image-2">
           <p class="image-caption"><?php echo $fraseParaAsistencia; ?><br> <img src="img/love-letter.png" width="50px" alt="">
 
           </p>
@@ -325,7 +324,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <form action="asistencia.php" method="get">
+              <form action="grabarAsistencia.php" method="get">
 
                 <div class="inputAsistencia">
 
@@ -392,7 +391,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <br>
         <div class="container-2">
           <div class="image-container-2">
-            <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+            <img src="img/fondo24.png" alt="Imagen 2" class="image-2">
             <p class="image-caption"><?php echo $fraseParaMensajes; ?><br> <img src="img/love.png" width="50px" alt="">
             </p>
 
@@ -408,39 +407,37 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
 
-              <form action="asistencia.php" method="get">
+              
+<form action="grabarMensaje.php" method="get">
+    <div class="inputAsistencia">
+        <div class="inputAsistencia1">
+            <p>Nombre</p>
+            <input class="inputAsistencia2" type="text" name="nombreInvitado" id="">
+        </div>
+        <div class="inputAsistencia1">
+            <p>Apellido</p>
+            <input class="inputAsistencia2" type="text" name="apellidoInvitado" id="">
+        </div>
+    </div>
 
-                <div class="inputAsistencia">
+    <hr>
 
-                  <div class="inputAsistencia1">
-                    <p>Nombre</p>
-                    <input class="inputAsistencia2" type="text" name="nombreInvitado" id="">
-                  </div>
-                  <div class="inputAsistencia1">
-                    <p>Apellido</p>
-                    <input class="inputAsistencia2" type="text" name="apellidoInvitado" id="">
-                  </div>
-                </div>
-                <hr>
-                <div class="inputAsistencia1">
-                  <p>Tu Mensaje</p>
-                  <div class="inputAsistencia">
-                    <div class="inputAsistencia1check">
+    <div class="inputAsistencia1">
+        <p>Tu Mensaje</p>
+        <div class="inputAsistencia">
+            <div class="inputAsistencia1check">
+            </div>
+            <div class="inputAsistencia1">
+                <textarea class="inputAsistencia2" name="mensaje" id="mensaje" rows="4" cols="50" maxlength="300"></textarea>
+                <div class="counter" id="contadorCaracteres"></div>
+            </div>
+        </div>
+    </div>
 
-                    </div>
-                    <div class="inputAsistencia1">
+    <hr>
 
-                      <textarea class="inputAsistencia2" name="apellidoInvitado" id="" rows="4" cols="50"></textarea>
-                    </div>
-
-                  </div>
-                </div>
-
-
-
-                <hr>
-                <button type="submit" class="enviar">Enviar</button>
-              </form>
+    <button type="submit" class="enviar">Enviar</button>
+</form>
             </div>
           </div>
         </div>
@@ -456,7 +453,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <br>
         <div class="container-2">
           <div class="image-container-2">
-            <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+            <img src="img/fondo24.png" alt="Imagen 2" class="image-2">
             <p class="image-caption"><?php echo $fraseParaCanciones; ?> <br> <img src="img/play.png" width="50px" alt=""></p>
 
           </div>
@@ -474,7 +471,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <form action="asistencia.php" method="get">
+              <form action="grabarMusica.php" method="get">
 
                 <div class="inputAsistencia">
 
@@ -562,29 +559,29 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
       <footer class="footer">
 
       <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-gift-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-gift-fill" viewBox="0 0 16 16">
             <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-house-door-fill" viewBox="0 0 16 16">
             <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
             <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
           </svg></div></a>
 
          
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-music-note-list" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-music-note-list" viewBox="0 0 16 16">
   <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
   <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
   <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>
@@ -661,6 +658,26 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
 
     // Observar todos los contenedores
     containers.forEach(container => observer.observe(container));
+
+
+
+
+       // Función para contar caracteres y limitar a 300
+       document.addEventListener('DOMContentLoaded', function() {
+        var textarea = document.getElementById('mensaje');
+        var contador = document.getElementById('contadorCaracteres');
+
+        textarea.addEventListener('input', function() {
+            var longitud = textarea.value.length;
+            contador.textContent ="Total:" + longitud + ' /Maximo:300';
+
+            // Limitar a 300 caracteres
+            if (longitud > 300) {
+                textarea.value = textarea.value.slice(0, 300);
+                contador.textContent = '300 / 300';
+            }
+        });
+    });
   </script>
 </body>
 

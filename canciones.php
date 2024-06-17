@@ -1,11 +1,19 @@
+<?php
+session_start();
+$id_evento=$_SESSION['id_evento'];
+require_once "conectar.php";
+// Consulta para seleccionar todos los campos del evento con id = 5
+$consulta = "SELECT * FROM temas_musicales WHERE id_evento = $id_evento";
+$datos = mysqli_query($conexion, $consulta);
+
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitaciones Virtuales</title>
-    <link rel="stylesheet" href="rosa.css">
+    <link rel="stylesheet" href="azul.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap"
@@ -78,123 +86,31 @@ Cantante
 Cancion
                     </td>                   
                 </tr>
+
+                <?php
+while($fila=mysqli_fetch_array($datos)){
+
+$nombreSolicitante=$fila["nombre_solicitante"];
+$nombreCAncion=$fila["nombre_cancion"];
+$cantante=$fila["cantante"];
+
+?>
+
                 <tr class="trContenido">
                     <td>
-javier
+             <?php echo $nombreSolicitante ?>
                     </td>                    <td>
-Los Pericos
+                    <?php echo $cantante?>
                     </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
-                    </td>                    
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Los Pericos
-                    </td>                    <td>
-Nose Algo
+                    <?php echo $nombreCAncion?>
                     </td>                    
                 </tr>
-            </table>
+           
 
-
-
+<?php
+}
+?>
+ </table>
 
             <footer class="footer">
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-gift-fill" viewBox="0 0 16 16">

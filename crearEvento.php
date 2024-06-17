@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Nuevo Evento</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Crear Nuevo Evento</h2>
+    <h2 class="h2CrearEvento">Crear Nuevo Evento</h2>
     <form action="crear_evento.php" method="post" enctype="multipart/form-data">
         <div class="formCrearEvento">
             <div class="formCrearEvento1">
@@ -64,6 +65,26 @@
                         <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                     <?php } ?>
                 </select><br><br>
+
+                <label for="id_frase_para_regalo">ID de la Frase para Regalo:</label>
+                <select id="id_frase_para_regalo" name="id_frase_para_regalo" required>
+                    <?php for ($i = 1; $i <= 10; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select><br><br>
+
+
+                <label for="id_dress_code">ID Dress Code:</label>
+                <select id="id_dress_code" name="id_dress_code" required>
+                    <?php for ($i = 1; $i <= 10; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select><br><br>
+
+
+
+
+
             </div>
         </div>
         <h4 class="submitCrearEvento"><input  type="submit" value="Crear Evento"></h4>

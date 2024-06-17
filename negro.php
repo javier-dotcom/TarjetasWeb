@@ -56,7 +56,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitaciones Virtuales</title>
-  <link rel="stylesheet" href="rosa.css">
+  <link rel="stylesheet" href="negro.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap" rel="stylesheet">
@@ -122,8 +122,9 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
 
 
       <h1 class="teEspero"> Mis 15 Años </h1>
+      <br>
       <h1 class="teEspero"><span><?php echo $nombre_cumpleanera; ?></span></h1>
-
+      <br>
       <h2 class="teEspero">Te Espero</h2>
 
 
@@ -197,6 +198,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
       <br><br>
       <br>
       <br>
+      <br> <br>
       <br>
 
       <div class="wrapper">
@@ -299,10 +301,10 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
       </div>
 
 
-      <br>
+      <br>  <br>  <br>
       <div class="container-2">
         <div class="image-container-2">
-          <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+          <img src="img/fondo30.png" alt="Imagen 2" class="image-2">
           <p class="image-caption"><?php echo $fraseParaAsistencia; ?><br> <img src="img/love-letter.png" width="50px" alt="">
 
           </p>
@@ -311,15 +313,15 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
       </div>
       <br>
 
-      <div class="accordion" id="accordionExample">
+      <!-- <div class="accordion" id="accordionExample"> -->
 
-
-
-
-        <div class="accordion-item ">
+        <div class="accordion-item  ">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              <h5 class="collapsedh5">Confirma Asistencia</h5>
+            <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <h5 class="collapsedh5">Confirma Asistencia <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg>  </h5>
 
             </button>
           </h2>
@@ -392,7 +394,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <br>
         <div class="container-2">
           <div class="image-container-2">
-            <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+            <img src="img/fondo30.png" alt="Imagen 2" class="image-2">
             <p class="image-caption"><?php echo $fraseParaMensajes; ?><br> <img src="img/love.png" width="50px" alt="">
             </p>
 
@@ -402,7 +404,10 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h5 class="collapsedh5"> Dejar un Mensaje</h5>
+              <h5 class="collapsedh5"> Dejar un Mensaje  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg> </h5>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -456,7 +461,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <br>
         <div class="container-2">
           <div class="image-container-2">
-            <img src="img/fondo5.png" alt="Imagen 2" class="image-2">
+            <img src="img/fondo30.png" alt="Imagen 2" class="image-2">
             <p class="image-caption"><?php echo $fraseParaCanciones; ?> <br> <img src="img/play.png" width="50px" alt=""></p>
 
           </div>
@@ -466,10 +471,14 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
 
 
 
+
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <h5 class="collapsedh5"> Elegir La Musica </h5>
+              <h5 class="collapsedh5"> Elegir La Musica <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg> </h5>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -509,7 +518,7 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
             </div>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
 
       <br>
       <div class="container">
@@ -518,11 +527,14 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         </div>
       </div>
       <br>
-      <div class="accordion accordion-flush" id="accordionFlushExample">
+      <!-- <div class="accordion accordion-flush" id="accordionFlushExample"> -->
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <h5 class="collapsedh5-2">&nbsp; Como Llegar </h5>
+              <h5 class="collapsedh5-2">&nbsp; Como Llegar  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg> </h5>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -541,7 +553,10 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <h5 class="collapsedh5-2">&nbsp; Regalo </h5>
+              <h5 class="collapsedh5-2">&nbsp; Regalo  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg> </h5>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -555,36 +570,36 @@ $fraseParaRegalo = $fila = mysqli_fetch_array($datosFraseRegalo)["texto"];
           </div>
         </div>
 
-      </div>
+      <!-- </div> -->
 
 
 
       <footer class="footer">
 
       <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-gift-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-gift-fill" viewBox="0 0 16 16">
             <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-house-door-fill" viewBox="0 0 16 16">
             <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
           </svg></div></a>
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
             <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
           </svg></div></a>
 
          
 
           <a href="">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-music-note-list" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(16, 16, 119, 0.6)" class="bi bi-music-note-list" viewBox="0 0 16 16">
   <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
   <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
   <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>

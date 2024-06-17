@@ -1,11 +1,19 @@
+<?php
+session_start();
+$id_evento=$_SESSION['id_evento'];
+require_once "conectar.php";
+// Consulta para seleccionar todos los campos del evento con id = 5
+$consulta = "SELECT * FROM asistencia WHERE id_evento = $id_evento";
+$datos = mysqli_query($conexion, $consulta);
+
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitaciones Virtuales</title>
-    <link rel="stylesheet" href="rosa.css">
+    <link rel="stylesheet" href="azul.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap"
@@ -82,554 +90,37 @@ Celiaco
 Vegetariano
                     </td>
                 </tr>
-                <tr class="trContenido">
+                <?php
+while($fila=mysqli_fetch_array($datos)){
+$nombre=$fila["nombre"];
+$apellido=$fila["apellido"];
+$celiaco = ($fila["celiaco"] == 0) ? "NO" : "SI";
+$vegetariano = ($fila["vegetariano"] == 0) ? "NO" : "SI";
+
+?>
+ <tr class="trContenido">
                     <td>
-javier
+                    <?php echo $nombre ?>
                     </td>                    <td>
-Dalessandxro
+                    <?php echo $apellido ?>
                     </td>                    <td>
 4
                     </td>                    <td>
-si
+                    <?php echo $celiaco ?>
                     </td>                    <td>
-no
+                    <?php echo $vegetariano ?>
                     </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr><tr class="trContenido">
-                    <td>
-javier
-                    </td>                    <td>
-Dalessandxro
-                    </td>                    <td>
-4
-                    </td>                    <td>
-si
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Lorena
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-1
-                    </td>                    <td>
-si
-                    </td>                    <td>
-si
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Santiago
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Nicolas
-                    </td>                    <td>
-Dalessandro
-                    </td>                    <td>
-2
-                    </td>                    <td>
-no
-                    </td>                    <td>
-no
-                    </td>
-                </tr>    <tr class="trContenido">
-                    <td>
-Biancaombre
-                    </td>                    <td>
-Varrica
-                    </td>                    <td>
-2
-                    </td>                    <td>
-No
-                    </td>                    <td>
-No
-                    </td>
-                </tr>
+                </tr>  
+                <?php
+}
+?>
             </table>
 
 
 
 
             <footer class="footer">
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-gift-fill" viewBox="0 0 16 16">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(0,0,0,0.5)" class="bi bi-gift-fill" viewBox="0 0 16 16">
                 <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z"/>
               </svg></div>
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#550b0b" class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -643,7 +134,7 @@ No
                 </svg></div>
             </footer>
             <div class="nuestrosServicios">
-              <a href="nosotros.html">Nuestros Servicios  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+              <a href="nosotros.php">Nuestros Servicios  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                 <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
                 <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
               </svg></a>
